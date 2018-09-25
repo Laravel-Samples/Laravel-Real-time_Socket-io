@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer mt-5">
     <div class="container">
         <h3 class="text-center">
             <a href="https://www.linkedin.com/in/thiago-mallon/" data-social="linkedin" class="text-primary" target="_blank">
