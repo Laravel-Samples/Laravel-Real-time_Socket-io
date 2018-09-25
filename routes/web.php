@@ -14,3 +14,7 @@
 /* Non authenticated routes */
 Route::get('/', 'FrontController@index')->name('home');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
