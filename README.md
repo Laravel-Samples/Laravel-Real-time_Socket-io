@@ -1,6 +1,15 @@
 # Laravel 5.7 - Custom User Registration
 
-In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications], this app includes a customized User Registration. This app also implements a simplistic real-time public message broadcasting resource along with Pusher, Laravel Events, Laravel Channels, Laravel Echo and Vue.js.
+In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications], this app includes a customized User Registration. 
+
+### The customization of the User Registration includes:
+
+- replacing the 'name' property, column, validation and everything associate with this data to 'username'
+- adding a Request Class (RegistrationRequest) to deal with the form fields validation and error message customization
+- adding a get route to the logout
+- segregating layout and public files in 'front' and 'dashboard'
+
+This app also implements a simplistic real-time public message broadcasting resource along with Pusher, Laravel Events, Laravel Channels, Laravel Echo and Vue.js.
 
 
 The application updates in real time the home page message. The route to update the message is:
@@ -26,6 +35,11 @@ Install the [laravel-echo] and [pusher-js]:
 ```
 $ npm install --save laravel-echo pusher-js && npm run dev
 ```
+
+License
+----
+
+MIT
 
 **by [Thiago Mallon]**
 
