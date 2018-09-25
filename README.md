@@ -1,6 +1,7 @@
-# Laravel 5.7 -  Real-time Public Notifications
+# Laravel 5.7 - Custom User Registration
 
-App exemplifying how to implement a simplistic real-time public message broadcasting resource along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Echo] and [Vue.js].
+Adding to the repository jamesmallon/Laravel-RealTime_Public_Notifications, this app includes a customized User Registration. This app also implements a simplistic real-time public message broadcasting resource along with Pusher, Laravel Events, Laravel Channels, Laravel Echo and Vue.js.
+
 
 The application updates in real time the home page message. The route to update the message is:
 ```
