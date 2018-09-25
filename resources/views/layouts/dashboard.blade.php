@@ -3,7 +3,7 @@
     <head>
         <!-- meta tags -->
         @include("layouts.partials.metas") 
-
+        
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="/imgs/favicon/favicon.png">
         
@@ -11,13 +11,13 @@
         <title>{{ env("APP_NAME") }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="{{ mix('/css/front/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('/css/dashboard/app.css') }}">
     </head>
     <body>
         <div id="app">
             <!-- navbar -->
             @include("layouts.partials.navbar")
-            
+
             <!-- Title container -->
             <div class="container">
                 <div class="row">
@@ -37,7 +37,7 @@
             @include('layouts.partials.footer')
         </div>
 
-        <script type="text/javascript" src="{{ mix('/js/front/app.js') }}"></script>
+        <script type="text/javascript" src="{{ mix('/js/dashboard/app.js') }}"></script>
     </body>
 </html>
 
