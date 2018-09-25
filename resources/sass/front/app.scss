@@ -1,20 +1,15 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,600');
 
 // font-awesome
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 // Variables
-@import 'variables';
+@import './../variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
 
 html, body {
     background-color: #fff;
@@ -23,6 +18,11 @@ html, body {
     font-weight: 200;
     height: 100vh;
     margin: 0;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .full-height {
