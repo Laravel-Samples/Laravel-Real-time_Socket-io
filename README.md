@@ -32,14 +32,12 @@ Instal npm dependencies and run the mix tasks:
 $ npm install && npm run dev
 ```
 
-Install the [pusher/pusher-php-server] via composer:
+On your .env file put your Pusher credentials:
 ```
-$ composer require pusher/pusher-php-server
-```
-
-Install the [laravel-echo] and [pusher-js]:
-```
-$ npm install --save laravel-echo pusher-js && npm run dev
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=
 ```
 
 License
