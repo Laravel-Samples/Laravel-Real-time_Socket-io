@@ -11,7 +11,7 @@
         <title>{{ env("APP_NAME") }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('/css/front/app.css') }}">
     </head>
     <body>
         <div id="app">
@@ -33,11 +33,11 @@
             <div class="content">
                 @yield("content")
             </div>
-            
-            @include("layouts.partials.footer")
+
+            @include('layouts.partials.footer')
         </div>
 
-        <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ mix('/js/front/app.js') }}"></script>
     </body>
 </html>
 
