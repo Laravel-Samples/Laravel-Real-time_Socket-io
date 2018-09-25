@@ -1,5 +1,7 @@
 # Laravel 5.7 - Custom User Registration
 
+This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Echo] and [Vue.js]
+
 In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications], this app includes a customized User Registration. 
 
 ### The customization of the User Registration includes:
@@ -9,13 +11,17 @@ In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications
 - adding a get route to the logout
 - segregating layout and public files in 'front' and 'dashboard'
 
-This app also implements a simplistic real-time public message broadcasting resource along with Pusher, Laravel Events, Laravel Channels, Laravel Echo and Vue.js.
+### Home page real-time message updating:
 
+Under the title, in the home page lays a quotation: 
+Genius is one percent inspiration and ninety-nine percent perspiration. - Thomas Edison
 
-The application updates in real time the home page message. The route to update the message is:
+This message can be update in real time, it means that all browsers or tabs running the home page of this app will be updated in real time if a new message  is sent to:
 ```
 /api/send-message/{your-message}
 ```
+
+
 Install composer dependencies:
 ```
 $ composer install
