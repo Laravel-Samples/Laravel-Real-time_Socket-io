@@ -1,6 +1,6 @@
 # Laravel 5.7 - Custom User Registration
 
-This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Echo] and [Vue.js]
+This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Echo] and [Vue.js]
 
 In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications], this app includes a customized User Registration. 
 
@@ -51,6 +51,7 @@ MIT
  [Vue.js]: <https://vuejs.org/>
  [Laravel Events]: <https://laravel.com/docs/5.7/events>
  [Laravel Channels]: <https://laravel.com/docs/5.7/broadcasting#defining-channel-classes>
+ [Laravel Form Requests]: <https://laravel.com/docs/5.7/validation#creating-form-requests>
  [Laravel Echo]: <https://laravel.com/docs/5.7/broadcasting#installing-laravel-echo>
  [pusher/pusher-php-server]: <https://packagist.org/packages/pusher/pusher-php-server>
  [laravel-echo]: <https://www.npmjs.com/package/laravel-echo>
