@@ -19,9 +19,7 @@ mix.react('resources/js/front/app.js', 'public/js/front/')
     .mix.version() // enabling verion for dev and prod
     .mix.webpackConfig({ // enabling js and scss files mapping 
         devtool: 'source-map'
-    })
-    .sourceMaps()
-    ;
+    }).sourceMaps();
 
 //if (mix.inProduction()) {
 //    mix.version();
