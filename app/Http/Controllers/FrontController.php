@@ -16,10 +16,8 @@
  */
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;    
-use App\Events\PublicMessageSent;   
-use App\Http\Requests\PublicMessageRequest; 
-use Validator;
+use Illuminate\Http\Request;        
+use Illuminate\Foundation\Inspiring;
 
 /**
  * Class FrontController
@@ -51,24 +49,12 @@ class FrontController extends Controller
      */
     public function index(): object
     {
-        return view('front.home');
-    }
+        /* The only way I found to send only the message to vue */
+        $homeMessage = \App\HomeMessage::latest()->first();
+        $message = ($homeMessage)? 
+            $homeMessage->message : Inspiring::quote();
+        $message = json_encode(['message'=> $message]);
 
-    /**
-     * Public method sendPublicMessage - Method dispatch the broadcasting event
-     *
-     * @method string sendPublicMessage Method dispatch the broadcasting event
-     * @return string 
-     */
-    public function sendPublicMessage(): object
-    {
-        $validator = Validator::make(
-        );
-        if ($validator->fails()) {
-            return response($validator->errors(), 200);
-        } else {
-            PublicMessageSent::dispatch(request('message'));
-            return response(request('message'), 200);
-        }
+        return view('front.home', compact('message'));
     }
 }
