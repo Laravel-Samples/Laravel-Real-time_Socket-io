@@ -2,7 +2,7 @@
     <div>
         <input type="text" v-model="newMessage" @keydown.enter="save" class="form-control" :class="inputRes" autofocus>
          <div :class="feedbackRes" v-html="feedbackBox"></div>
-        <button type="button" @click="save">Go!</button>
+        <button type="button" class="btn btn-primary mt-4" @click="save">Go!</button>
     </div>
 </template>
 
@@ -31,7 +31,7 @@
                 if (response.status != 200) {
                     this.feedbackRes = "invalid-feedback";
                     this.inputRes = "is-invalid";
-                    this.feedbackBox = response.data;
+                    this.feedbackBox = response.data.errors.message[0];
                 } else {
                     this.feedbackRes = "";
                     this.inputRes = "";
