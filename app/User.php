@@ -48,4 +48,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Public method homeMessages - User messages
+     *
+     * @method object homeMessages User messages
+     * @return object       
+     */
+    public function homeMessages(): object
+    {
+        return $this->hasMany('App\HomeMessage'); 
+    }
 }
