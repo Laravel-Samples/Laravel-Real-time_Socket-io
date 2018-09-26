@@ -41,6 +41,12 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        'ajax' => [
+            \App\Http\Middleware\AjaxRequests::class,
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+        ]
     ];
 
     /**
