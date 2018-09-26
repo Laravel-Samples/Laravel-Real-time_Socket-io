@@ -14,13 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Hey, {{ auth()->user()->username}}, write the home message bellow.
+                    <home-message-block></home-message-block>
                 </div>
             </div>
+
         </div>
     </div>
-</div>
-<div id="app" class="d-none">
-    <member-added :data-user="{{ auth()->user() }}"></member-added>
 </div>
 @endsection
