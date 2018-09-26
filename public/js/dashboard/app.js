@@ -1671,7 +1671,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (response.status != 200) {
                 this.feedbackRes = "invalid-feedback";
                 this.inputRes = "is-invalid";
-                this.feedbackBox = response.data;
+                this.feedbackBox = response.data.errors.message[0];
             } else {
                 this.feedbackRes = "";
                 this.inputRes = "";
