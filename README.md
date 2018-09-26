@@ -1,8 +1,12 @@
-# Laravel 5.7 - Custom User Registration
+# Laravel 5.7 - Public Notifications with Pusher
 
-This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Echo] and [Vue.js]
+This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Middleware], [Laravel Echo] and [Vue.js]
 
 In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications], this app includes a customized User Registration. 
+
+### Home page real-time message updating:
+
+Under the Home page title lays a quotation, this text box can be updated in real time by registered users. Open two browser windows and see the message sent in the dashboard changing in real time the Home page message.
 
 ### The customization of the User Registration includes:
 
@@ -10,17 +14,6 @@ In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications
 - adding a Request Class (RegistrationRequest) to deal with the form fields validation and error message customization
 - adding a get route to the logout
 - segregating layout and public files in 'front' and 'dashboard'
-
-### Home page real-time message updating:
-
-Under the title, in the home page lays a quotation: 
-Genius is one percent inspiration and ninety-nine percent perspiration. - Thomas Edison
-
-This message can be update in real time, it means that all browsers or tabs running the home page of this app will be updated in real time if a new message  is sent to:
-```
-/api/send-message/{your-message}
-```
-
 
 Install composer dependencies:
 ```
@@ -52,6 +45,7 @@ MIT
  [Laravel Events]: <https://laravel.com/docs/5.7/events>
  [Laravel Channels]: <https://laravel.com/docs/5.7/broadcasting#defining-channel-classes>
  [Laravel Form Requests]: <https://laravel.com/docs/5.7/validation#creating-form-requests>
+ [Laravel Middleware}: <https://laravel.com/docs/5.7/middleware>
  [Laravel Echo]: <https://laravel.com/docs/5.7/broadcasting#installing-laravel-echo>
  [pusher/pusher-php-server]: <https://packagist.org/packages/pusher/pusher-php-server>
  [laravel-echo]: <https://www.npmjs.com/package/laravel-echo>
