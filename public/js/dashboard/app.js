@@ -46089,9 +46089,15 @@ var render = function() {
       domProps: { innerHTML: _vm._s(_vm.feedbackBox) }
     }),
     _vm._v(" "),
-    _c("button", { attrs: { type: "button" }, on: { click: _vm.save } }, [
-      _vm._v("Go!")
-    ])
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary mt-4",
+        attrs: { type: "button" },
+        on: { click: _vm.save }
+      },
+      [_vm._v("Go!")]
+    )
   ])
 }
 var staticRenderFns = []
