@@ -45,7 +45,7 @@ MIT
  [Laravel Events]: <https://laravel.com/docs/5.7/events>
  [Laravel Channels]: <https://laravel.com/docs/5.7/broadcasting#defining-channel-classes>
  [Laravel Form Requests]: <https://laravel.com/docs/5.7/validation#creating-form-requests>
- [Laravel Middleware}: <https://laravel.com/docs/5.7/middleware>
+ [Laravel Middleware]: <https://laravel.com/docs/5.7/middleware>
  [Laravel Echo]: <https://laravel.com/docs/5.7/broadcasting#installing-laravel-echo>
  [pusher/pusher-php-server]: <https://packagist.org/packages/pusher/pusher-php-server>
  [laravel-echo]: <https://www.npmjs.com/package/laravel-echo>
