@@ -1644,9 +1644,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['homeMessage'],
     data: function data() {
         return {
-            messageFront: 'Genius is one percent inspiration and ninety-nine percent perspiration. - Thomas Edison'
+            messageFront: this.homeMessage.message
         };
     },
     created: function created() {
