@@ -1,4 +1,4 @@
-# Laravel 5.7 - Public Notifications with Pusher
+# Laravel 5.7 - Public Real-Time Notifications with Pusher
 
 This app works along with [Pusher], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Middleware], [Laravel Echo] and [Vue.js]
 
