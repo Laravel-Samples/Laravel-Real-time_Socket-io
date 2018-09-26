@@ -4,9 +4,10 @@
 
 <script>
     export default {
+        props: ['homeMessage'], 
         data() {
             return {
-                messageFront: 'Genius is one percent inspiration and ninety-nine percent perspiration. - Thomas Edison'
+                messageFront: this.homeMessage.message
             }
         },
         created() { // called after the component is created
