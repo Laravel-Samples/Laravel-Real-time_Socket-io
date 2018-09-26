@@ -18,21 +18,11 @@
             <!-- navbar -->
             @include("layouts.partials.navbar")
 
-            <!-- Title container -->
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="title text-center">
-                            {{ env("APP_NAME") }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Content -->
             <div class="content">
                 @yield("content")
             </div>
+            @include('layouts.partials.form-error')
 
             @include('layouts.partials.footer')
         </div>
