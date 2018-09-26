@@ -6,7 +6,10 @@ In addition to the repository [jamesmallon/Laravel-RealTime_Public_Notifications
 
 ### Home page real-time message updating:
 
-Under the Home page title lays a quotation, this text box can be updated in real time by registered users. All new messages are saved to the database and by default the system print the last massage save, if none, it gets a Laravel Inspire quote. Open two browser windows and see the message sent in the dashboard changing in real time the Home page message.
+Under the Home page title lays a quotation, this text box can be updated in real time by logged users. All new messages are saved to the database and by default the system print the last massage added, if none, it gets a Laravel Inspire quote.
+
+### How it works:
+To change the home page message you'll need to register and login in the app - write new messages in the dashboard and in other browser tab you'll be able to see the home page message being updated in real time. 
 
 ### The customization of the User Registration includes:
 
