@@ -33,6 +33,7 @@
             <div class="content">
                 @yield("content")
             </div>
+            @include('layouts.partials.form-error')
 
             @include('layouts.partials.footer')
         </div>
