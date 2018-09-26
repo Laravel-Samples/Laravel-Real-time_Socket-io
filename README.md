@@ -27,6 +27,8 @@ $ npm install && npm run dev
 
 On your .env file put your Pusher credentials:
 ```
+BROADCAST_DRIVER=pusher
+
 PUSHER_APP_ID=
 PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
