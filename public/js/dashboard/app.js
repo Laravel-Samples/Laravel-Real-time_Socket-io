@@ -1671,7 +1671,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (response.status != 200) {
                 this.feedbackRes = "invalid-feedback";
                 this.inputRes = "is-invalid";
-                this.feedbackBox = response.data;
+                this.feedbackBox = response.data.errors.message[0];
             } else {
                 this.feedbackRes = "";
                 this.inputRes = "";
@@ -46089,9 +46089,15 @@ var render = function() {
       domProps: { innerHTML: _vm._s(_vm.feedbackBox) }
     }),
     _vm._v(" "),
-    _c("button", { attrs: { type: "button" }, on: { click: _vm.save } }, [
-      _vm._v("Go!")
-    ])
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary mt-4",
+        attrs: { type: "button" },
+        on: { click: _vm.save }
+      },
+      [_vm._v("Go!")]
+    )
   ])
 }
 var staticRenderFns = []
