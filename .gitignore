@@ -14,3 +14,4 @@ yarn-error.log
 .phpunit.result.cache
 *.bkp
 README.md
+laravel-echo-server.json
