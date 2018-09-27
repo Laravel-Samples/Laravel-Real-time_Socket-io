@@ -2,7 +2,7 @@
 
 This app works along with [Socket.io], [Redis], [Predis], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Middleware], [Laravel Echo], [AdminLTE] and [Vue.js]
 
-In addition to the repository [Laravel-RealTime_Notifications_Pusher], this app includes a customized User Registration. 
+In addition to the repository [Laravel-RealTime_Notifications_Pusher], this app includes an AdminLTE dashboard and the websocket is now socket.io. 
 
 ### Home page real-time message updating:
 
@@ -14,8 +14,8 @@ To change the home page message you'll need to register and login in the app - w
 
 ### The customization of the User Registration includes:
 
-- replacing the 'name' property, column, validation and everything associate with this data to 'username'
-- adding a Request Class (RegistrationRequest) to deal with the form fields validation and error message customization
+- replaced 'name' to 'username'
+- added a Request Class to deal with the user registration form validation and error message
 - adding a get route to the logout
 - segregating layout and public files in 'front' and 'dashboard'
 
