@@ -19,6 +19,15 @@ To change the home page message you'll need to register and login in the app - w
 - adding a get route to the logout
 - segregating layout and public files in 'front' and 'dashboard'
 
+### Running the application
+
+Your Redis instance have to be working and for the real time messaging it is necessary 
+to run the [laravel-echo-server]
+
+```
+$ laravel-echo-server start
+```
+
 ### Installation
 
 **You will need the Redis installed and running in your environemnt;**
@@ -57,14 +66,6 @@ REDIS_PORT=6379
 DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
-```
-### Running the application
-
-Your Redis instance have to be working and for the real time messaging it is necessary 
-to run the [laravel-echo-server]
-
-```
-$ laravel-echo-server start
 ```
 
 License
