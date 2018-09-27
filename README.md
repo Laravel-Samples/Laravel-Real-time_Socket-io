@@ -58,6 +58,14 @@ DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
 ```
+### Running the application
+
+Your Redis instance have to be working and for the real time messaging it is necessary 
+to run the [laravel-echo-server]
+
+```
+$ laravel-echo-server start
+```
 
 License
 ----
@@ -77,5 +85,6 @@ MIT
  [Laravel Middleware]: <https://laravel.com/docs/5.7/middleware>
  [Laravel Echo]: <https://laravel.com/docs/5.7/broadcasting#installing-laravel-echo>
  [laravel-echo]: <https://www.npmjs.com/package/laravel-echo>
+ [laravel-echo-server]: <https://www.npmjs.com/package/laravel-echo-server>
  [Thiago Mallon]: <https://www.linkedin.com/in/thiago-mallon/>
  [Laravel-RealTime_Notifications_Pusher]: <https://github.com/jamesmallon/Laravel-RealTime_Notifications_Pusher>
