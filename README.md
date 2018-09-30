@@ -1,4 +1,4 @@
-# Laravel 5.7 - Public Real-Time Notifications with Socket.io and Redis 
+# Laravel 5.7 - Public real-Time alerting with events Socket.io and Redis 
 
 This app works along with [Socket.io], [Redis], [Predis], [Laravel Events], [Laravel Channels], [Laravel Form Requests], [Laravel Middleware], [Laravel Echo] and [Vue.js]
 
