@@ -26,14 +26,12 @@
         },
         methods: {
             save() {
-                if (this.newMessage.length) {
                     axios.post(`/ajax/send-message`, {message: this.newMessage })
                      .catch(function (error) {
                             return error.response;
                       }).then(this.setResponse);
 
                     this.newMessage = '';
-                }
             },
             setResponse(response) {
                 if (response.status != 200) {
