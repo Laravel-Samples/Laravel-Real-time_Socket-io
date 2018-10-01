@@ -1717,21 +1717,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             newMessage: '',
             feedbackBox: '',
-            feedbackRes: '',
-            inputRes: ''
+            invalidRes: false
         };
     },
 
     methods: {
         save: function save() {
             if (this.newMessage.length) {
-                axios.post('/ajax/send-message/', { message: this.newMessage }).catch(function (error) {
+                axios.post('/ajax/send-message', { message: this.newMessage }).catch(function (error) {
                     return error.response;
                 }).then(this.setResponse);
 
@@ -1740,12 +1748,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         setResponse: function setResponse(response) {
             if (response.status != 200) {
-                this.feedbackRes = "invalid-feedback";
-                this.inputRes = "is-invalid";
+                this.invalidRes = true;
                 this.feedbackBox = response.data.errors.message[0];
+                console.log(response.data.errors);
             } else {
-                this.feedbackRes = "";
-                this.inputRes = "";
+                this.invalidRes = false;
                 this.feedbackBox = "Your message was sent!";
             }
         }
@@ -8327,7 +8334,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"","NODE_ENV":"development"}).DEBUG;
+    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).DEBUG;
   }
 
   return r;
@@ -45637,42 +45644,54 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.newMessage,
-          expression: "newMessage"
-        }
-      ],
-      staticClass: "form-control",
-      class: _vm.inputRes,
-      attrs: { type: "text", autofocus: "" },
-      domProps: { value: _vm.newMessage },
-      on: {
-        keydown: function($event) {
-          if (
-            !("button" in $event) &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
+    _c("div", { staticClass: "form-row" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("label", { attrs: { for: "transfer-username" } }, [
+          _vm._v("Home Message")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newMessage,
+              expression: "newMessage"
+            }
+          ],
+          staticClass: "form-control",
+          class: { "is-invalid": _vm.invalidRes },
+          attrs: {
+            type: "text",
+            placeholder: "Write here your home message...",
+            autofocus: ""
+          },
+          domProps: { value: _vm.newMessage },
+          on: {
+            keydown: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.save($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newMessage = $event.target.value
+            }
           }
-          return _vm.save($event)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.newMessage = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("div", {
-      class: _vm.feedbackRes,
-      domProps: { innerHTML: _vm._s(_vm.feedbackBox) }
-    }),
+        }),
+        _vm._v(" "),
+        _c("div", {
+          class: { "invalid-feedback": _vm.invalidRes },
+          domProps: { innerHTML: _vm._s(_vm.feedbackBox) }
+        })
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "button",
@@ -45681,7 +45700,7 @@ var render = function() {
         attrs: { type: "button" },
         on: { click: _vm.save }
       },
-      [_vm._v("Go!")]
+      [_c("strong", [_vm._v("Send!")])]
     )
   ])
 }
